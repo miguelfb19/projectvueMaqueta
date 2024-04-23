@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0"/> <!--Este es el VIEWPORT es para que mi responsive design quede bien maquetado en cualquier dispositivo-->
+    <title>Maquetacion Framworks JavaScript</title>
+
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css"/>
+    
+</head>
+<body>
+    <div class="info">Si quieres ver el codigo completo del proyecto y backend visita <a href="https://drive.google.com/drive/folders/18WZwghxXgY6xWlls9uwjrcWJnub_vA5s?usp=share_link">Click aquí</a> <br> Para ver el codigo en github <a href="https://github.com/miguelfb19/projectvue.git">Click aquí</a></div>
+    <header id="header">
+
+        <div class="center"> <!--Metemos todo en un div con clase "center" para establecer todo en el centro con CSS-->
+             
+            <div id="logo">
+                <!--LOGO -->
+                <img src="assets/images/logoVueJS.png" class="appLogo" alt="Logotipo"/>
+                <span id="brand">
+                    <strong>Master</strong>VueJS
+                </span>
+            </div>
+            
+
+             <!--MENU -->
+             <nav id="menu">
+                <ul>
+                   <li>
+                    <a href="index.html">Inicio</a>
+                   </li>
+                   <li>
+                    <a href="blog.html">Blog</a>
+                   </li>
+                   <li>
+                    <a href="formulario.html">Formulario</a>
+                   </li>
+                   <li>
+                    <a href="#">Página 1</a>
+                   </li>
+                   <li>
+                    <a href="#">Página 2</a>
+                   </li> 
+                </ul>
+             </nav>
+            <!--LIMPIAR FLOTADO (FLOAT)-->
+            <div class="clearfix"></div> <!--esto evita que lo de abajo me dañe el diseño de arriba, mirar CSS .clearfix-->
+        </div>
+    </header> 
+    
+    <div id="slider" class="slider-big">
+        <h1>Bienvenido al curso de VueJS con Victor Robles de victorroblesweb.com</h1>
+        <a href="blog.html" class="btn-white">Ir al Blog</a>
+    </div>
+
+    <div class="center">
+        <section id="content">
+            <h2 class="sub-header">Ultimos artículos</h2>
+            <script type="text/javascript">
+
+                window.addEventListener("load", function(){ //esta linea se usa para que no se ejecute el script hasta que la pagina cargue totalmente
+                    let template = document.getElementById("article-template")
+                    let articles =document.getElementById("articles")
+                    for(let i=1; i<=5;i++){
+                        let clonado = template.cloneNode(true) //me clona el elemento seleccionado en la variable template
+                        clonado.removeAttribute("id") //remueve el atributo del elemento contenido en "clonado"
+                        let h2 = clonado.getElementsByTagName ("h2")[0] //variable h2 que obtiene el elemento por medio de etiqueta
+                        h2.innerHTML = h2.textContent + ' ' + i
+
+                        articles.appendChild(clonado) //inserta en la variable articles el elemento de la variable clonado
+                    }
+                })
+            </script>
+            <!--Listado articulos-->
+
+            <div id="articles">
+                <article class="article-item" id="article-template">
+                    <div class="image-wrap">
+                        <img src="https://png.pngtree.com/background/20230610/original/pngtree-landscapes-wallpaper-images-picture-image_3021437.jpg"/>
+                    </div>
+    
+                    <h2>Artículo de prueba</h2>
+                    <span class="date"> Hace 5 minutos </span>
+                    <a href="#">Leer más</a>
+                    <div class="clearfix"></div>
+                </article>
+                <!--Añadir articulos via JS-->
+            </div>
+            
+        </section>
+        
+        <aside id="sidebar">
+            <div id="nav-blog" class="sidebar-item">
+                <h3>Puedes hacer esto</h3>
+                <a href="#" class="btn btn-success">Crear artículo</a>
+            </div>
+
+           <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el artículo que buscas</p>
+                <form>
+                    <input type="text" name="search"/>
+                    <input type="submit" name="submit" value="buscar" class="btn"/>
+                </form>
+            </div>
+        </aside>
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+    <Footer id="footer">
+        <div class="center">
+            <p>
+                &copy; Master en Frameworks para JS <!--El "&copy;" me mete el logo de copyrigth-->
+            </p>
+        </div>
+    </Footer>
+</body>
+</html>

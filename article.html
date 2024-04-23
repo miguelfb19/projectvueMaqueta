@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0"/>
+    <title>Maquetacion Framworks JavaScript</title>
+
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css"/>
+    
+</head>
+<body>
+    <header id="header">
+
+        <div class="center"> <!--Metemos todo en un div con clase "center" para establecer todo en el centro con CSS-->
+             
+            <div id="logo">
+                <!--LOGO -->
+                <img src="assets/images/logoVueJS.png" class="appLogo" alt="Logotipo"/>
+                <span id="brand">
+                    <strong>Master</strong>VueJS
+                </span>
+            </div>
+            
+
+             <!--MENU -->
+             <nav id="menu">
+                <ul>
+                   <li>
+                    <a href="index.html">Inicio</a>
+                   </li>
+                   <li>
+                    <a href="blog.html">Blog</a>
+                   </li>
+                   <li>
+                    <a href="formulario.html">Formulario</a>
+                   </li>
+                   <li>
+                    <a href="#">Página 1</a>
+                   </li>
+                   <li>
+                    <a href="#">Página 2</a>
+                   </li> 
+                </ul>
+             </nav>
+            <!--LIMPIAR FLOTADO (FLOAT)-->
+            <div class="clearfix"></div> <!--esto evita que lo de abajo me dañe el diseño de arriba, mirar CSS .clearfix-->
+        </div>
+    </header> 
+   
+    <div class="center">
+        <section id="content">
+                <article class="article-item article-detail">
+                    <h1 class="sub-header">Artículo de prueba</h1>
+                    <div class="image-wrap">
+                        <img src="https://png.pngtree.com/background/20230610/original/pngtree-landscapes-wallpaper-images-picture-image_3021437.jpg"/>
+                    </div>
+    
+                    <span class="date"> Hace 5 minutos </span>
+                    <p>
+                        Aenean sagittis vestibulum arcu, nec fringilla libero convallis nec. Proin vitae lobortis erat, vitae efficitur lacus. Donec ex elit, cursus et facilisis at, mattis ac nisl. Suspendisse id venenatis arcu, vel pellentesque urna. Phasellus maximus libero venenatis tellus semper, ac dictum lorem vestibulum. Praesent vel urna in nibh egestas lobortis et a magna. Aenean ipsum dui, volutpat ac maximus id, porta ac sapien. Aenean aliquet sem sit amet sagittis malesuada. Nunc lacinia hendrerit enim non sodales. Phasellus porttitor orci quis tellus pretium, quis rhoncus nisi gravida. Nullam vehicula mattis nulla a rutrum. Fusce ut augue at purus posuere egestas.
+
+                        <br><br>Suspendisse nibh arcu, aliquam in quam id, accumsan convallis lectus. Curabitur rhoncus interdum urna vel pellentesque. Integer dictum, sapien et viverra varius, mauris massa laoreet diam, et euismod mi ex quis ipsum. Proin nec accumsan purus. Ut eget diam nisi. Nullam fringilla accumsan sem id porta. Nulla facilisi. Vivamus ultricies, nisi id suscipit tempus, odio est convallis metus, sed dignissim tellus nibh ut dolor. Phasellus mauris odio, blandit nec elit bibendum, luctus molestie sapien. Aliquam consectetur tincidunt nunc ac gravida. Vestibulum eu venenatis justo. Phasellus sit amet feugiat eros, vitae sollicitudin mi. Aenean blandit justo turpis, id interdum ligula ultricies in.
+
+                        <br><br>Pellentesque vitae varius enim. Cras mauris dolor, consectetur bibendum mattis et, volutpat nec metus. Donec felis lectus, porta a dignissim ac, tincidunt eu risus. Cras pulvinar orci quis mauris condimentum auctor. Proin fringilla rhoncus mauris, id egestas ipsum placerat at. Proin a blandit libero, quis scelerisque lacus. Praesent scelerisque massa non odio varius eleifend ac eget sapien. Etiam viverra arcu non sapien iaculis ultricies. Mauris placerat finibus sodales. Vestibulum pharetra, tortor non venenatis lacinia, augue libero congue elit, venenatis bibendum metus nunc vel purus. Proin quam nisl, vehicula et nulla in, interdum consectetur massa. Phasellus imperdiet lorem eget nibh venenatis, vel vestibulum eros pellentesque. Curabitur egestas consectetur nisi, sed finibus diam. Donec elementum pellentesque libero bibendum vehicula. Aliquam at lacus eget lorem tempor condimentum.
+
+                        <br><br>In consectetur aliquet enim non luctus. Praesent quis iaculis justo. Mauris in tortor vel nisi accumsan pretium. Suspendisse sit amet eleifend ex. Nullam sit amet orci non nunc dictum sodales. In dapibus dictum posuere. Nulla vel mauris sem. Nulla porttitor odio vel sodales dapibus. Etiam gravida sem sit amet nisl elementum dignissim. Ut malesuada volutpat enim et mattis. Cras ut ligula in mi dictum condimentum. Nam id turpis in lorem auctor aliquam eget vel ligula. Duis sollicitudin id ex at eleifend. Fusce auctor, neque vel ultrices mollis, sem metus faucibus turpis, quis tempus tellus justo a ante.
+
+                        <br>Vestibulum a velit nulla. Integer bibendum, mauris id auctor dignissim, ante sapien vehicula libero, lobortis efficitur eros dolor ac mauris. Praesent in laoreet risus. Vestibulum eleifend nulla elementum nibh euismod congue. Aenean ullamcorper, metus at malesuada dignissim, lectus massa fermentum purus, at aliquam ligula metus eu nisi. Morbi tempor tempor ultricies. Aenean ullamcorper nisl efficitur orci laoreet, non tristique erat gravida. Praesent rhoncus tincidunt tellus, non vehicula quam vehicula non.
+                    </p>
+                    <div class="clearfix"></div>
+                </article>   
+        </section>
+        
+        <aside id="sidebar" class="sidebar-article">
+            <div id="nav-blog" class="sidebar-item">
+                <h3>Puedes hacer esto</h3>
+                <a href="#" class="btn btn-success">Crear artículo</a>
+            </div>
+
+           <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el artículo que buscas</p>
+                <form>
+                    <input type="text" name="search"/>
+                    <input type="submit" name="submit" value="buscar" class="btn"/>
+                </form>
+            </div>
+        </aside>
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+    <Footer id="footer">
+        <div class="center">
+            <p>
+                &copy; Master en Frameworks para JS <!--El "&copy;" me mete el logo de copyrigth-->
+            </p>
+        </div>
+    </Footer>
+</body>
+</html>
